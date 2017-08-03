@@ -31,8 +31,6 @@ module.exports = () => {
     this.helpers = options.helpers
     this.pagesPath = options.pagesPath
     this.templates = {}
-
-    // https://stackoverflow.com/a/37217166
   }
 
   /**
@@ -89,7 +87,7 @@ module.exports = () => {
 
             const extension = path.extname(file)
             const templateName = path.relative(this.pagesPath, file)
-              .slice(0, -extension.length).replace('/', '_');
+              .slice(0, -extension.length).replace(/\//gmi, '_')
 
             this.register(templateName, data)
 
@@ -144,8 +142,8 @@ module.exports = () => {
     */
   EngineES6.prototype.render = function (name, data, locals, options) {
     // Look for and resolve partials
-    Object.keys(this.templates).forEach(i => {
-      locals[i] = resolve(this.templates[i], locals)
+    this.templates[name].substitutions.map(i => {
+      if (i in this.templates) locals[i] = resolve(this.templates[i], locals)
     })
 
     return Promise.resolve(resolve(this.templates[name], locals))
