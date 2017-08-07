@@ -6,7 +6,7 @@
 <head>
 
 
-<meta http-equiv="set-cookie" content="cf_use_ob=0; expires=Mon, 07-Aug-17 15:51:54 GMT; path=/">
+<meta http-equiv="set-cookie" content="cf_use_ob=0; expires=Mon, 07-Aug-17 15:54:04 GMT; path=/">
 
 
 <title>img.shields.io | 522: Connection timed out</title>
@@ -33,7 +33,7 @@
             <h1>
               <span class="cf-error-type" data-translate="error">Error</span>
               <span class="cf-error-code">522</span>
-              <small class="heading-ray-id">Ray ID: 38ab654d8cdb3560 &bull; 2017-08-07 15:51:24 UTC</small>
+              <small class="heading-ray-id">Ray ID: 38ab6875cd3d139b &bull; 2017-08-07 15:53:34 UTC</small>
             </h1>
             <h2 class="cf-subheadline" data-translate="error_desc">Connection timed out</h2>
         </div><!-- /.error-overview -->
@@ -96,7 +96,7 @@
 
         <div class="cf-error-footer cf-wrapper">
   <p>
-    <span class="cf-footer-item">Cloudflare Ray ID: <strong>38ab654d8cdb3560</strong></span>
+    <span class="cf-footer-item">Cloudflare Ray ID: <strong>38ab6875cd3d139b</strong></span>
     <span class="cf-footer-separator">&bull;</span>
     <span class="cf-footer-item"><span data-translate="your_ip">Your IP</span>: 86.171.11.108</span>
     <span class="cf-footer-separator">&bull;</span>
