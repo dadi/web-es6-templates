@@ -1,3 +1,1 @@
-
-</body>
-</html>
+<footer>Made by DADI</footer>

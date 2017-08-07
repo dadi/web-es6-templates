@@ -126,7 +126,7 @@ module.exports = () => {
     *
     * @return {Promise} A Promise that resolves with the loaded data.
     */
-  EngineES6.prototype.register = function (name, data, path) {
+  EngineES6.prototype.register = function (name, data) {
     this.templates[name] = compile(data)
   }
 

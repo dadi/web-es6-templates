@@ -1,7 +1,9 @@
 ${partials_header}
 
-<h1>ES6 Templates test</h1>
+<h1>Products:</h1>
 
-<p>This page lives at ${host}.</p>
+<ul>
+  ${products.map(product => '<li>' + product.name + ' - £' + product.price + '</li>').join('\n')}
+</ul>
 
 ${partials_footer}
