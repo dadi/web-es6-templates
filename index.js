@@ -21,7 +21,7 @@ module.exports = () => {
 
   const es6 = require('es6-template-strings')
   const compile = require('es6-template-strings/compile')
-  const resolve = require('es6-template-strings/resolve-to-string')
+  const resolveToString = require('es6-template-strings/resolve-to-string')
 
   const EngineES6 = function (options) {
     debug('Starting ES6 templates engine...')
@@ -143,10 +143,21 @@ module.exports = () => {
   EngineES6.prototype.render = function (name, data, locals, options) {
     // Look for and resolve partials
     this.templates[name].substitutions.map(i => {
-      if (i in this.templates) locals[i] = resolve(this.templates[i], locals)
+      if (i in this.templates) locals[i] = resolveToString(this.templates[i], locals)
     })
 
-    return Promise.resolve(resolve(this.templates[name], locals))
+    return new Promise((resolve, reject) => {
+      try {
+        resolve(resolveToString(this.templates[name], locals))
+      }
+      catch (err) {
+        return reject({
+          name: 'web-es6-templates',
+          message: 'Error rendering template: ' + name,
+          stack: err
+        })
+      }
+    })
   }
 
   return EngineES6
