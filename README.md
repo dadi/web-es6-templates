@@ -32,6 +32,32 @@ This module allows native [ES6 template literals](https://developer.mozilla.org/
 
 ## Usage
 
+### Helpers
+
+The base directory for absolute paths is the `utils/helpers` directory.
+
+Helpers are `required()` functions that can be embeded into templates to keep your code DRY. Take this example which could live in your `helpers` folder as `slugify.js`.
+
+```javascript
+var s = require('underscore.string/slugify')
+
+module.exports = slugify = (chunk) => {
+  return s(chunk)
+}
+```
+
+This function would be used in a template file like so:
+
+```javascript
+${slugify('The quick brown fox jumps over the lazy dog')}
+```
+
+Output:
+
+```
+the-quick-brown-fox-jumps-over-the-lazy-dog
+```
+
 ### Includes
 
 The base directory for absolute paths is the `pages/` directory. Take the following directory tree.
@@ -45,7 +71,7 @@ pages/
 |_ index.json
 ```
 
-To include the partials from `index.js`, you can do:
+To include the partials from `index.js`, you can use an underscore to indicate a sub-folder:
 
 ```js
 ${partials_header}
