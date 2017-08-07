@@ -1,5 +1,3 @@
-**🚧 UNDER DEVELOPMENT 🚧**
-
 <img src="https://dadi.tech/assets/products/dadi-web-full.png" alt="DADI Web" height="65"/>
 
 ## ES6 template engine interface
@@ -49,7 +47,7 @@ module.exports = slugify = (chunk) => {
 This function would be used in a template file like so:
 
 ```javascript
-${slugify('The quick brown fox jumps over the lazy dog')}
+${slugify('The Quick Brown Fox Jumps Over The Lazy Dog')}
 ```
 
 Output:
