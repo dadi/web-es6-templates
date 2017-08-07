@@ -4,9 +4,9 @@
 
 ## ES6 template engine interface
 
-[![npm (scoped)](https://img.shields.io/npm/v/@dadi/web-pugjs.svg?maxAge=10800&style=flat-square)](https://www.npmjs.com/package/@dadi/web-pugjs)
-[![coverage](https://img.shields.io/badge/coverage-85%25-yellow.svg?style=flat?style=flat-square)](https://github.com/dadi/web-pugjs)
-[![Build Status](https://travis-ci.org/dadi/web-pugjs.svg?branch=master)](https://travis-ci.org/dadi/web-pugjs)
+[![npm (scoped)](https://img.shields.io/npm/v/@dadi/web-es6-templates.svg?maxAge=10800&style=flat-square)](https://www.npmjs.com/package/@dadi/web-es6-templates)
+[![coverage](https://img.shields.io/badge/coverage-85%25-yellow.svg?style=flat?style=flat-square)](https://github.com/dadi/web-es6-templates)
+[![Build Status](https://travis-ci.org/dadi/web-es6-templates.svg?branch=master)](https://travis-ci.org/dadi/web-es6-templates)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 
