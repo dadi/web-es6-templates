@@ -1,19 +1,22 @@
-// Creates a very basic config object with a `.get()` method,
-// similar to the one used by convict. It returns whatever properties
-// are passed in as an argument.
-module.exports.mockConfig = properties => ({
-  get: property => properties[property]
-})
+'use strict'
 
-module.exports.mockTemplate = () => {
-  const Template = function () {
+const fs = require('fs')
+const path = require('path')
 
-  }
-
-  Template.prototype.register = function (data) {
-    console.log('----> data:', data)
-    return Promise.resolve(data)
-  }
-
-  return Template
+const PATHS = {
+  engine: path.join(__dirname, '/../../index'),
+  workspace: path.join(__dirname, '/../workspace')
 }
+
+const ADDITIONAL_TEMPLATES = {
+  'partials/footer': path.join(PATHS.workspace, 'pages/partials/footer.js'),
+  'partials/header': path.join(PATHS.workspace, 'pages/partials/header.js')
+}
+
+const PAGES = {
+  products: fs.readFileSync(path.join(PATHS.workspace, 'pages/products.js'), 'utf8')
+}
+
+module.exports.additionalTemplates = ADDITIONAL_TEMPLATES
+module.exports.pages = PAGES
+module.exports.paths = PATHS

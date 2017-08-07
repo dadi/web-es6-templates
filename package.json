@@ -1,6 +1,6 @@
 {
   "name": "@dadi/web-es6-templates",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "ES6 engine interface for DADI Web",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "dadi",
     "web"
   ],
+  "author": "David Longworth <mr@longworth.to>",
   "bugs": {
     "url": "https://github.com/dadi/web-es6-templates/issues"
   },
@@ -32,6 +33,7 @@
     "istanbul": "^1.1.0-alpha.1",
     "istanbul-cobertura-badger": "^1.1.0",
     "mocha": "~3.2.0",
+    "object-path": "^0.11.4",
     "semantic-release": "^6.3.2",
     "should": "~4.0.4",
     "sinon": "~1.17.6",

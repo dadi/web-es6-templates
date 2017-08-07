@@ -4,6 +4,7 @@ const path = require('path')
 const should = require('should')
 const helpers = require(path.join(__dirname, '/helpers'))
 
+let config = require(path.join(__dirname, '/helpers/config'))
 let engine
 let factory
 
@@ -12,7 +13,7 @@ const PATHS = {
   workspace: path.join(__dirname, '/workspace')
 }
 
-describe('Dust.js interface', function () {
+describe('ES6 template literals interface', function () {
   // Get a fresh instance of the engine
   beforeEach(done => {
     factory = require(PATHS.engine)
@@ -41,4 +42,32 @@ describe('Dust.js interface', function () {
 
     done()
   })
+
+  it('should declare .js as a supported extension', done => {
+    factory.metadata.extensions.indexOf('.js').should.not.equal(-1)
+
+    done()
+  })
+
+  it('should load pages', done => {
+    const Engine = factory()
+    const instance = new Engine({
+      config: config,
+      pagesPath: path.join(helpers.paths.workspace, 'pages')
+    })
+
+    instance.initialise().then(() => {
+      return instance.register('products', helpers.pages.products)
+    }).then(() => {
+      const core = instance.getCore()
+
+      console.log(core)
+      //const type = typeof core.cache.products
+
+     // type.should.eql('function')
+
+      done()
+    })
+  })
+
 })
