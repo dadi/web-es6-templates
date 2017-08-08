@@ -1,3 +1,5 @@
+'use strict'
+
 const fs = require('fs')
 const htmlLooksLike = require('html-looks-like')
 const path = require('path')
