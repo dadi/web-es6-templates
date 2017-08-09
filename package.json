@@ -15,7 +15,9 @@
   },
   "keywords": [
     "dadi",
-    "web"
+    "web",
+    "es6-templates",
+    "dadi-web-engine"
   ],
   "author": "David Longworth <mr@longworth.to>",
   "bugs": {
