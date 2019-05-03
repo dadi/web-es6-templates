@@ -1,12 +1,11 @@
-<img src="https://dadi.tech/assets/products/dadi-web-full.png" alt="DADI Web" height="65"/>
+<img src="https://dadi.cloud/assets/products/dadi-web-full.png" alt="DADI Web" height="65"/>
 
 ## ES6 template engine interface
 
 [![npm (scoped)](https://img.shields.io/npm/v/@dadi/web-es6-templates.svg?maxAge=10800&style=flat-square)](https://www.npmjs.com/package/@dadi/web-es6-templates)
-[![coverage](https://img.shields.io/badge/coverage-74%25-yellow.svg?style=flat?style=flat-square)](https://github.com/dadi/web-es6-templates)
+[![Coverage Status](https://coveralls.io/repos/github/dadi/web-es6-templates/badge.svg?branch=master)](https://coveralls.io/github/dadi/web-es6-templates?branch=master)
 [![Build Status](https://travis-ci.org/dadi/web-es6-templates.svg?branch=master)](https://travis-ci.org/dadi/web-es6-templates)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com/)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 
 This module allows native [ES6 template literals](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Template_literals) to be used with [DADI Web](https://github.com/dadi/web).
 
